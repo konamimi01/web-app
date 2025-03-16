@@ -1,0 +1,82 @@
+.journey-container {
+    background-color: #fde4e4;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .journey-header {
+    text-align: center;
+    background-color: #f8a8a8;
+    padding: 40px 0;
+  }
+  
+  .header-logo {
+    width: 50px;
+  }
+  
+  .header-title {
+    color: white;
+    font-size: 24px;
+  }
+  
+  .journey-main {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .journey-overview, .journey-schedule, .journey-additional-info {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .timeline {
+    position: relative;
+    padding-left: 20px;
+    border-left: 2px dashed red;
+  }
+  
+  .schedule-day {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .timeline-marker {
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  
+  .schedule-content {
+    background: #fff0f0;
+    padding: 15px;
+    border-radius: 8px;
+    flex-grow: 1;
+  }
+  
+  .activity-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .activity-item {
+    padding: 5px 0;
+  }
+  
+  .activity-time {
+    font-weight: bold;
+  }
+  

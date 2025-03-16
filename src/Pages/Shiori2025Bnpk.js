@@ -1,12 +1,12 @@
 import React from "react";
 
-function Error() {
+function Shiori2025Bnpk() {
     return (
         <>
             <div className="App">
                 <header className="App-header">
                     <p>
-                        NOT WORKING...
+                        Shiori2025Bnpk
                     </p>
                 </header>
             </div>
@@ -14,4 +14,4 @@ function Error() {
     )
 }
 
-export default Error;
+export default Shiori2025Bnpk;

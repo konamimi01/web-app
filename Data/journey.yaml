@@ -1,22 +1,35 @@
-title: "2023年 夏の旅行計画"
-overview: "2023年の夏休みに友人と一緒に旅行する計画。目的地は国内の観光地で、食事や観光を楽しむ。"
+title: "2025年-関西万博旅行"
+overview: |
+  旅程（Ver.2025/03/15）
+  　DAY1：5/6
+  　　移動（埼玉⇒大阪）
+  　DAY2：5/7
+  　　万博⇒会食
+  　DAY3：5/8
+  　　万博
+  　DAY4：5/9
+  　　山崎蒸留所
+  　DAY5：5/10
+  　　移動（京都⇒埼玉）
 
 schedule:
-  - day: "1日目"
-    details: "東京出発・大阪観光"
+  - date: "5 / 6"
+    weekday: " 火 "
+    day_number: 1
     activities:
-      - time: "08:00"
-        description: "東京駅出発、新幹線で大阪へ"
-      - time: "11:30"
-        description: "大阪駅到着、ホテルにチェックイン"
-      - time: "12:30"
-        description: "道頓堀でランチ（お好み焼き）"
-      - time: "14:00"
-        description: "大阪城観光"
-      - time: "18:00"
-        description: "梅田でショッピング"
-      - time: "20:00"
-        description: "ホテルに戻る"
+      - time: "10:30"
+        title: "移動（埼玉⇒大阪）"
+        description: |
+          白岡：xx:xx発
+          │
+          東京：xx:xx着⇒xx:xx発
+          │
+          新大阪：xx:xx着
+      - time: "14:30"
+        title: "ホテルチェックイン"
+        description: |
+          あああ
+          いいい
 
   - day: "2日目"
     details: "京都観光"

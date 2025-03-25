@@ -91,6 +91,7 @@ const Quiz = () => {
                         </label>
                     </div>
                 ))}
+                <br></br>
                 <button onClick={handleSubmit}>回答</button>
                 {showAnswer && (
                     <div>

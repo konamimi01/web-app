@@ -42,34 +42,49 @@ function Shiori2025Bnpk() {
                 <main className="journey-main">
                     <section className="journey-overview">
                         <h2>旅の概要</h2>
-                        <p>{journeyData.overview}</p>
+                        <p className="overview-text" dangerouslySetInnerHTML={{__html: journeyData.overview.replace(/\n/g, '<br />') }} />
+                    </section>
+
+                    {/* Schedule */}
+                    <section className="journey-schedule">
+                        <h2>スケジュール</h2>
+                        <div className="timeline">
+                            {journeyData.schedule.map((item, index) => (
+                                <div key={index} className="schedule-day">
+                                    <div className="day-header-container">
+                                        <div className="day-header">
+                                            <span className="day-date">{item.date} </span>
+                                            <span className="day-weekday"> ({item.weekday}) </span>
+                                            <span className="day-number"> {item.ay_number}日目</span>
+                                        </div>
+                                    </div>
+                                    <div className="timeline-marker">◆</div>
+                                    <div className="schedule-content">
+                                        {item.activities.map((activity, idx) => (
+                                            <div key={idx} className="activity-box">
+                                                <div className="activity-header">
+                                                    <span className="activity-time">{activity.time}</span>
+                                                    <span className="activity-title"> {activity.title}</span>
+                                                </div>
+                                                <div className="activity-details">
+                                                    <p dangerouslySetInnerHTML={{__html: activity.description.replace(/\n/g, '<br />') }} />
+                                                    {activity.notes && (
+                                                        <ul className="activity-notes">
+                                                            {activity.notes.map((note, nIdx) => (
+                                                                <li key={nIdx}>{note}</li>
+                                                            ))}
+                                                        </ul>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </section>
                 </main>
-
-                {/* Schedule */}
-                <section className="journey-schedule">
-                    <h2>スケジュール</h2>
-                    <div className="timeline">
-                        {journeyData.schedule.map((item, index) => (
-                            <div key={index} className="schedule-day">
-                                <div className="timeline-marker">◆</div>
-                                <div className="schedule-content">
-                                    <h3 className="schedule-title">{item.day}:{item.details}</h3>
-                                    <ul className="activity-list">
-                                        {item.activities && item.activities.map((activity, idx) => (
-                                            <li key={idx} className="activity-item">
-                                                <span className="activity-time">{activity.time}</span> - {activity.description}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </section>
-
             </div>
-
         </>        
     )
 }

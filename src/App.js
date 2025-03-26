@@ -4,7 +4,7 @@ import Home from "./Pages/Home";
 import Error from "./Pages/Error";
 
 import Shiori2025Bnpk from './Pages/Shiori2025Bnpk';
-import Quiz from './Pages/Quiz';
+//import Quiz from './Pages/Quiz';
 
 const homeUrl = process.env.PUBLIC_URL;
 
@@ -16,8 +16,9 @@ function App() {
 
         <Route path={homeUrl+"/Shiori2025Bnpk"} element={<Shiori2025Bnpk />} />
 
+{/*}
         <Route path={homeUrl+"/quiz"} element={<Quiz />} />
-
+*/}
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>

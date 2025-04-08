@@ -1,70 +1,37 @@
-title: "2025年-関西万博旅行"
-overview: |
-  旅程（Ver.2025/03/15）
-  　DAY1：5/6
-  　　移動（埼玉⇒大阪）
-  　DAY2：5/7
-  　　万博⇒会食
-  　DAY3：5/8
-  　　万博
-  　DAY4：5/9
-  　　山崎蒸留所
-  　DAY5：5/10
-  　　移動（京都⇒埼玉）
-
+title: 東京観光旅行
+period:
+  start: '2025-04-10'
+  end: '2025-04-12'
+destination: 東京
+participants: 4
 schedule:
-  - date: "5 / 6"
-    weekday: " 火 "
-    day_number: 1
-    activities:
-      - time: "10:30"
-        title: "移動（埼玉⇒大阪）"
-        description: |
-          白岡：xx:xx発
-          │
-          東京：xx:xx着⇒xx:xx発
-          │
-          新大阪：xx:xx着
-      - time: "14:30"
-        title: "ホテルチェックイン"
-        description: |
-          あああ
-          いいい
-
-  - day: "2日目"
-    details: "京都観光"
-    activities:
-      - time: "08:00"
-        description: "ホテルで朝食"
-      - time: "09:30"
-        description: "京都へ移動"
-      - time: "10:30"
-        description: "清水寺観光"
-      - time: "12:00"
-        description: "祇園でランチ"
-      - time: "14:00"
-        description: "伏見稲荷大社観光"
-      - time: "17:00"
-        description: "大阪へ戻る"
-      - time: "19:00"
-        description: "夕食（焼肉）"
-      - time: "21:00"
-        description: "ホテルに戻る"
-
-  - day: "3日目"
-    details: "神戸観光・帰宅"
-    activities:
-      - time: "08:00"
-        description: "ホテルで朝食、チェックアウト"
-      - time: "09:30"
-        description: "神戸へ移動"
-      - time: "10:30"
-        description: "異人館街観光"
-      - time: "12:00"
-        description: "南京町でランチ（中華料理）"
-      - time: "14:00"
-        description: "メリケンパーク散策"
-      - time: "16:00"
-        description: "新神戸駅から新幹線で東京へ"
-      - time: "19:00"
-        description: "東京駅到着、解散"
+  day1:
+    date: '2025-04-10'
+    events:
+      - time: '10:00'
+        title: '東京駅集合'
+        description: 'JR東京駅丸の内中央改札口'
+      - time: '11:00'
+        title: '浅草寺観光'
+        description: '浅草寺、仲見世通りを散策'
+      - time: '13:00'
+        title: '昼食'
+        description: '浅草にて和食'
+  day2:
+    date: '2025-04-11'
+    events:
+      - time: '09:00'
+        title: 'ホテル出発'
+      - time: '10:00'
+        title: 'スカイツリー見学'
+      - time: '14:00'
+        title: '上野公園散策'
+  day3:
+    date: '2025-04-12'
+    events:
+      - time: '10:00'
+        title: 'チェックアウト'
+      - time: '11:00'
+        title: '秋葉原散策'
+      - time: '15:00'
+        title: '解散'

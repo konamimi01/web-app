@@ -1,11 +1,4 @@
-/*!
- * The buffer module from node.js, for the browser.
- *
- * @author   Feross Aboukhadijeh <https://feross.org>
- * @license  MIT
- */
-
-/*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
+/*! js-yaml 4.1.0 https://github.com/nodeca/js-yaml @license MIT */
 
 /**
  * @license React
@@ -20,6 +13,16 @@
 /**
  * @license React
  * react-dom.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * react-is.production.js
  *
  * Copyright (c) Meta Platforms, Inc. and affiliates.
  *

@@ -8,6 +8,7 @@ const Journey = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [toggleStates, setToggleStates] = useState({});
+  const [isOverviewExpanded, setIsOverviewExpanded] = useState(true);
 
   useEffect(() => {
     const loadJourneyData = async () => {
@@ -27,6 +28,10 @@ const Journey = () => {
           return acc;
         }, {});
         setToggleStates(initialToggleStates);
+
+        // Load overview toggle state from localStorage
+        const savedOverviewState = JSON.parse(localStorage.getItem('isOverviewExpanded'));
+        setIsOverviewExpanded(savedOverviewState !== null ? savedOverviewState : true); // Default to true
 
         setLoading(false);
       } catch (err) {
@@ -51,6 +56,14 @@ const Journey = () => {
     });
   };
 
+  const handleOverviewToggle = () => {
+    setIsOverviewExpanded((prev) => {
+      const newState = !prev;
+      localStorage.setItem('isOverviewExpanded', JSON.stringify(newState));
+      return newState;
+    });
+  };
+
   if (loading) return <Typography>Loading...</Typography>;
   if (error) return <Typography color="error">Error: {error}</Typography>;
   if (!journeyData) return <Typography>No data available</Typography>;
@@ -64,26 +77,35 @@ const Journey = () => {
 
         {/* 概要セクション */}
         <Paper elevation={0} className="content-section overview-section">
-          <Typography variant="h5" className="section-title">概要</Typography>
-          <Box className="overview-content">
-            <Box className="overview-item">
-              <Typography variant="subtitle1" className="overview-label">
-                持ち物
-              </Typography>
-              <Typography variant="body1">
-                パスポート、現金、スマートフォン、充電器、着替え
-              </Typography>
-            </Box>
-            <Divider />
-            <Box className="overview-item">
-              <Typography variant="subtitle1" className="overview-label">
-                集合場所
-              </Typography>
-              <Typography variant="body1">
-                東京駅 丸の内中央改札口
-              </Typography>
-            </Box>
+          <Box display="flex" alignItems="center" justifyContent="space-between">
+            <Typography variant="h5" className="section-title">概要</Typography>
+            <Switch
+              checked={isOverviewExpanded}
+              onChange={handleOverviewToggle}
+              color="primary"
+            />
           </Box>
+          {isOverviewExpanded && (
+            <Box className="overview-content">
+              <Box className="overview-item">
+                <Typography variant="subtitle1" className="overview-label">
+                  持ち物
+                </Typography>
+                <Typography variant="body1">
+                  パスポート、現金、スマートフォン、充電器、着替え
+                </Typography>
+              </Box>
+              <Divider />
+              <Box className="overview-item">
+                <Typography variant="subtitle1" className="overview-label">
+                  集合場所
+                </Typography>
+                <Typography variant="body1">
+                  東京駅 丸の内中央改札口
+                </Typography>
+              </Box>
+            </Box>
+          )}
         </Paper>
 
         {/* スケジュールセクション */}
